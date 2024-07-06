@@ -10,6 +10,87 @@
     
 <style>
 
+    	.main {
+		position: absolute;
+		width: 330px;
+		height: 90px;
+		overflow: hidden;
+		background-color: transparent;
+		line-height: 160px;
+		color: aquamarine;
+	}
+	.main div {
+		position: absolute;
+	}
+	.main :nth-child(1) {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		animation: run1 1s linear infinite;
+		/* animation-delay: 0s;  */
+		background: linear-gradient(to right, #fff, #acd, cyan);
+	}
+	.main :nth-child(2) {
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 2px;
+		animation: run2 1s linear infinite;
+		/* animation-delay: 1s; 设置动画延迟加载时间*/
+		background: linear-gradient(to bottom, #fff, #acd, cyan);
+	}
+	.main :nth-child(3) {
+		bottom: 0;
+		left: 0;
+		height: 2px;
+		width: 100%;
+		animation: run3 1s linear infinite;
+		/* animation-delay: 2s; 设置动画延迟加载时间*/
+		background: linear-gradient(to right, #fff, #acd, cyan);
+	}
+	.main :nth-child(4) {
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 2px;
+		animation: run4 1s linear infinite;
+		/* animation-delay: 3s; 设置动画延迟加载时间 */
+		background: linear-gradient(to top, #fff, #acd, cyan);
+	}
+	@keyframes run1 {
+		from {
+			transform: translateX(-100%)
+		}
+		to {
+			transform: translateX(100%)
+		}
+	}
+	@keyframes run2 {
+		from {
+			transform: translateY(-100%)
+		}
+		to {
+			transform: translateY(100%)
+		}
+	}
+	@keyframes run3 {
+		from {
+			transform: translateX(100%)
+		}
+		to {
+			transform: translateX(-100%)
+		}
+	}
+	@keyframes run4 {
+		from {
+			transform: translateY(100%)
+		}
+		to {
+			transform: translateY(-100%)
+		}
+	}
+    
 *{
     margin: 0;
     padding: 0;
@@ -74,6 +155,13 @@ body{
 </head>  
 
 <body>
+
+<div class="main">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+</div>
 <div class="nowtime">
     
 <!-- ここから時刻 -->
